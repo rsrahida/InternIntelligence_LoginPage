@@ -53,6 +53,7 @@ Form {
 h2 {
   font-size: 30px;
   padding-top: 10px;
+  padding-left: 150px;
   color: white;
   margin-bottom: 10px;
 }
@@ -79,7 +80,7 @@ label {
   font-size: 20px;
   border-radius: 8px;
   width: 100%;
-  height: 40px;
+  height: 35px;
   margin-top: 10px;
   transition: all 0.5s ease-in-out;
 }

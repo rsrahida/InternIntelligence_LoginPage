@@ -1,0 +1,91 @@
+.signInPage {
+  width: 100%;
+  height: 120vh;
+  background-color: #0f3645;
+  position: relative;
+}
+.signInPage img {
+  width: 33%;
+  height: 120vh;
+  margin-top: 0;
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.585) 70%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 5%,
+    rgba(0, 0, 0, 0.39) 30%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 1) 60%
+  );
+}
+
+.login {
+  width: 50%;
+  height: auto;
+  background-color: #00475fde;
+  position: absolute;
+  z-index: 10;
+  border-radius: 30px;
+  margin-top: 80px;
+  margin-left: 150px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.988);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login:hover {
+  box-shadow: 0 8px 40px rgb(0, 0, 0);
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  padding-right: 150px;
+  color: white;
+  margin-bottom: 20px;
+}
+.formInput {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  padding-left: 10px;
+}
+.text {
+  margin-top: 20px;
+  display: flex;
+  gap: 50px;
+}
+
+@media (max-width: 426px) {
+  .login {
+    width: 80%;
+    margin-left: 50px;
+  }
+  .signInPage img {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+  .text {
+    flex-direction: column;
+  }
+}

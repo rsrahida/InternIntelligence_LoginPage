@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
-import Home from "./pages/Home";
+import ForgotPassword from "./pages/ForgotPassword";
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
           <Route path="/" element={<Navigate to="/registration" />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/forgot-password" element={<ForgotPassword />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

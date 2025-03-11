@@ -4,29 +4,28 @@ import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import "./SignUp.css";
 import image from "../../assets/images/planet.jpg";
 import StarBackground from "../StarBackground/StarBackground";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [form] = Form.useForm();
   const [message, setMessage] = useState("");
   const [messageVisible, setMessageVisible] = useState(false);
+  const navigate = useNavigate();
 
   const onFinish = (values) => {
     console.log("Success:", values);
 
     localStorage.setItem("userData", JSON.stringify(values));
+
     setMessage("Your registration has been successfully completed!");
     setMessageVisible(true);
 
     setTimeout(() => {
       setMessageVisible(false);
+      navigate("/login"); 
     }, 2000);
 
     form.resetFields();
-  };
-
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
 
   const passwordValidation = [
@@ -40,8 +39,7 @@ const SignUp = () => {
       pattern: /[a-z]/,
       pattern: /\d/,
       pattern: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/,
-      message:
-        "8 characters, 1 uppercase letter, 1 lowercase letter, 1 digit, and 1 special characters!",
+      message: "Password: 8+ chars, upper, lower, digit, special.",
     },
   ];
 
@@ -53,11 +51,8 @@ const SignUp = () => {
         <Form
           form={form}
           name="signUp"
-          initialValues={{
-            remember: true,
-          }}
+          initialValues={{ remember: true }}
           onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
           layout="vertical"
         >
           <h2>Registration</h2>
@@ -76,7 +71,6 @@ const SignUp = () => {
             name="username"
             label="Username"
             rules={[{ required: true, message: "Please enter a username!" }]}
-            className="label"
           >
             <Input
               prefix={<UserOutlined />}
@@ -114,7 +108,6 @@ const SignUp = () => {
           </Form.Item>
 
           <Form.Item
-            className="label"
             name="confirm"
             label="Confirm Password"
             dependencies={["password"]}
@@ -143,8 +136,12 @@ const SignUp = () => {
               Register
             </Button>
           </Form.Item>
+
           <p>
-            Already have an account ? <Link to="/login" style={{color:"red"}}>Login now</Link>
+            Already have an account?{" "}
+            <Link to="/login" style={{ color: "red", textDecoration: "none" }}>
+              Login now
+            </Link>
           </p>
         </Form>
       </div>
