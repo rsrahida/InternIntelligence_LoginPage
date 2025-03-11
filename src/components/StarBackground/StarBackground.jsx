@@ -13,10 +13,10 @@ const StarBackground = () => {
     const newStar = () => {
       let id = starsArr.length,
         x = rnd(0, stars.offsetWidth),
-        size = rnd(2, 5) / 4,
+        size = rnd(2, 5) / 2,
         color = rnd(30, 60) / 100,
         speed = rnd(0.5, 1.5),
-        y = -16 * size;
+        y = -10 * size;
 
       starsArr.push({ id, x, y, size, color, speed });
       const starElement = document.createElement("div");
