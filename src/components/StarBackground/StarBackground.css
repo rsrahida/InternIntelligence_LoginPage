@@ -1,0 +1,6 @@
+.stars-container .star {
+    position: absolute; 
+    color: #2c6a82;
+    font-family: sans-serif;
+    user-select: none;
+  }
