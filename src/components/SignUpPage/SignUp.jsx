@@ -4,6 +4,7 @@ import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import "./SignUp.css";
 import image from "../../assets/images/planet.jpg";
 import StarBackground from "../StarBackground/StarBackground";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [form] = Form.useForm();
@@ -113,7 +114,7 @@ const SignUp = () => {
           </Form.Item>
 
           <Form.Item
-          className="label"
+            className="label"
             name="confirm"
             label="Confirm Password"
             dependencies={["password"]}
@@ -142,6 +143,9 @@ const SignUp = () => {
               Register
             </Button>
           </Form.Item>
+          <p>
+            Already have an account ? <Link to="/login" style={{color:"red"}}>Login now</Link>
+          </p>
         </Form>
       </div>
     </div>

@@ -1,12 +1,12 @@
 .signUpPage {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background-color: #0f3645;
   position: relative;
 }
 .signUpPage img {
   width: 33%;
-  height: 105vh;
+  height: 120vh;
   margin-top: 0;
   float: right;
   position: absolute;
@@ -52,9 +52,9 @@ Form {
 }
 h2 {
   font-size: 30px;
-  padding-top: 20px;
+  padding-top: 10px;
   color: white;
- margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .formInput {
   width: 100%;
@@ -69,21 +69,19 @@ label {
   color: #fff !important;
   font-weight: 500;
   font-size: 17px !important;
-  
 }
-
-
-
 .button {
   background-color: #365a7b;
   border: none;
   color: white;
   font-weight: bold;
   padding: 12px;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 8px;
   width: 100%;
-  transition: all 0.3s ease-in-out;
+  height: 40px;
+  margin-top: 10px;
+  transition: all 0.5s ease-in-out;
 }
 .button:hover {
   background-color: #ffffff !important;
@@ -92,4 +90,37 @@ label {
 .ant-alert {
   margin-bottom: 20px;
   font-size: 16px;
+}
+p {
+  text-align: center;
+  padding-top: -10px;
+  padding-bottom: 30px;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .register {
+    width: 60%;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 426px) {
+  .signUpPage img {
+    display: none;
+  }
+  .register {
+    width: 90%;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 321px) {
+  .signUpPage img {
+    display: none;
+  }
+  .register {
+    width: 90%;
+    margin-left: 20px;
+  }
 }
