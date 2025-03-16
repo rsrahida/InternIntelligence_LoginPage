@@ -18,7 +18,6 @@ const Password = () => {
       <StarBackground />
       <div className="passwordForm">
         <h2 className="forgot">Forgot Password</h2>
-
         {emailSent && (
           <Alert
             message="Reset link has been sent to your email!"
@@ -26,7 +25,6 @@ const Password = () => {
             showIcon
           />
         )}
-
         <Form onFinish={onFinish}>
           <Form.Item
             label="Email"
@@ -38,15 +36,16 @@ const Password = () => {
           >
             <Input placeholder="Enter your registered email" />
           </Form.Item>
-
           <Form.Item>
             <Button type="primary" htmlType="submit" block className="button">
               Reset Password
             </Button>
           </Form.Item>
-
           <p>
-            Remember your password <Link to="/login" style={{textDecoration:"none"}}>Login here</Link>
+            Remember your password{" "}
+            <Link to="/login" style={{ textDecoration: "none" }}>
+              Login here
+            </Link>
           </p>
         </Form>
       </div>

@@ -22,7 +22,7 @@ const SignUp = () => {
 
     setTimeout(() => {
       setMessageVisible(false);
-      navigate("/login"); 
+      navigate("/login");
     }, 2000);
 
     form.resetFields();
@@ -56,7 +56,6 @@ const SignUp = () => {
           layout="vertical"
         >
           <h2>Registration</h2>
-
           {messageVisible && (
             <Alert
               message={message}
@@ -66,7 +65,6 @@ const SignUp = () => {
               style={{ marginBottom: "20px" }}
             />
           )}
-
           <Form.Item
             name="username"
             label="Username"
@@ -78,7 +76,6 @@ const SignUp = () => {
               className="formInput"
             />
           </Form.Item>
-
           <Form.Item
             name="email"
             label="Email"
@@ -93,7 +90,6 @@ const SignUp = () => {
               className="formInput"
             />
           </Form.Item>
-
           <Form.Item
             name="password"
             label="Password"
@@ -106,7 +102,6 @@ const SignUp = () => {
               className="formInput"
             />
           </Form.Item>
-
           <Form.Item
             name="confirm"
             label="Confirm Password"
@@ -130,13 +125,11 @@ const SignUp = () => {
               className="formInput"
             />
           </Form.Item>
-
           <Form.Item>
             <Button type="primary" htmlType="submit" block className="button">
               Register
             </Button>
           </Form.Item>
-
           <p>
             Already have an account?{" "}
             <Link to="/login" style={{ color: "red", textDecoration: "none" }}>
